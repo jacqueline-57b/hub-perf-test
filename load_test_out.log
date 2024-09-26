@@ -1,150 +1,18 @@
-npm WARN exec The following package was not found and will be installed: ts-node@10.9.2
-/home/runner/.npm/_npx/1bf7c3c15bf47d04/node_modules/ts-node/src/index.ts:859
+/home/runner/work/hub-perf-test/hub-perf-test/node_modules/ts-node/src/index.ts:859
     return new TSError(diagnosticText, diagnosticCodes, diagnostics);
            ^
 TSError: ⨯ Unable to compile TypeScript:
-sdk_load_test/load_create_ip_with_existing_collection.ts(6,21): error TS2307: Cannot find module 'fs' or its corresponding type declarations.
-sdk_load_test/load_create_ip_with_existing_collection.ts(7,23): error TS2307: Cannot find module 'path' or its corresponding type declarations.
-sdk_load_test/load_create_ip_with_existing_collection.ts(20,9): error TS2322: Type 'PrivateKeyAccount' is not assignable to type '`0x${string}` | Account | undefined'.
-  Type 'PrivateKeyAccount' is not assignable to type '{ address: `0x${string}`; nonceManager?: NonceManager | undefined; sign?: ((parameters: { hash: `0x${string}`; }) => Promise<`0x${string}`>) | undefined; experimental_signAuthorization?: ((parameters: Authorization) => Promise<...>) | undefined; ... 17 more ...; isDeployed?: undefined; }'.
-    Types of property 'signTransaction' are incompatible.
-      Type '<TTransactionSerializable extends TransactionSerializable>(transaction: TTransactionSerializable, args?: { serializer?: SerializeTransactionFn<TTransactionSerializable> | undefined; } | undefined) => Promise<...>' is not assignable to type '<serializer extends SerializeTransactionFn<TransactionSerializable> = SerializeTransactionFn<TransactionSerializable>, transaction extends Parameters<serializer>[0] = Parameters<...>[0]>(transaction: transaction, options?: { ...; } | undefined) => Promise<...>'.
-        Types of parameters 'transaction' and 'transaction' are incompatible.
-          Type 'transaction' is not assignable to type 'TransactionSerializable'.
-            Type 'Parameters<serializer>[0]' is not assignable to type 'TransactionSerializable'.
-              Type 'OneOf<TransactionSerializable>' is not assignable to type 'TransactionSerializable'.
-                Type '{ type?: "eip2930" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type 'TransactionSerializable'.
-                  Type '{ type?: "eip2930" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type 'TransactionSerializableEIP1559<bigint, number>'.
-                    Type '{ type?: "eip2930" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type 'Partial<FeeValuesEIP1559<bigint>>'.
-                      Types of property 'gasPrice' are incompatible.
-                        Type 'bigint | undefined' is not assignable to type 'undefined'.
-                          Type 'bigint' is not assignable to type 'undefined'.
-                            Type 'Parameters<serializer>[0]' is not assignable to type 'TransactionSerializableGeneric<bigint, number>'.
-                              Type 'OneOf<TransactionSerializable>' is not assignable to type 'TransactionSerializableGeneric<bigint, number>'.
-                                Type '{ type?: "legacy" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type 'TransactionSerializableGeneric<bigint, number>'.
-                                  Type '{ type?: "legacy" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                    Types of property 'type' are incompatible.
-                                      Type 'string | undefined' is not assignable to type 'string'.
-                                        Type 'undefined' is not assignable to type 'string'.
-                                          Type 'Parameters<serializer>[0]' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                            Type 'OneOf<TransactionSerializable>' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                              Type '{ type?: "legacy" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                Types of property 'type' are incompatible.
-                                                  Type 'string | undefined' is not assignable to type 'string'.
-                                                    Type 'undefined' is not assignable to type 'string'.
-                                                      Type 'transaction' is not assignable to type 'TransactionSerializableGeneric<bigint, number>'.
-                                                        Type 'Parameters<serializer>[0]' is not assignable to type 'TransactionSerializableGeneric<bigint, number>'.
-                                                          Type 'OneOf<TransactionSerializable>' is not assignable to type 'TransactionSerializableGeneric<bigint, number>'.
-                                                            Type '{ type?: "legacy" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type 'TransactionSerializableGeneric<bigint, number>'.
-                                                              Type '{ type?: "legacy" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                                Types of property 'type' are incompatible.
-                                                                  Type 'string | undefined' is not assignable to type 'string'.
-                                                                    Type 'undefined' is not assignable to type 'string'.
-                                                                      Type 'Parameters<serializer>[0]' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                                        Type 'OneOf<TransactionSerializable>' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                                          Type '{ type?: "legacy" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                                            Types of property 'type' are incompatible.
-                                                                              Type 'string | undefined' is not assignable to type 'string'.
-                                                                                Type 'undefined' is not assignable to type 'string'.
-                                                                                  Type 'transaction' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                                                    Type 'Parameters<serializer>[0]' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                                                      Type 'OneOf<TransactionSerializable>' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                                                        Type '{ type?: "legacy" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                                                          Types of property 'type' are incompatible.
-                                                                                            Type 'string | undefined' is not assignable to type 'string'.
-                                                                                              Type 'undefined' is not assignable to type 'string'.
-sdk_load_test/load_create_ip_with_existing_collection.ts(21,9): error TS2322: Type 'HttpTransport' is not assignable to type 'Transport'.
-  Types of parameters '__0' and '__0' are incompatible.
-    Type '{ chain?: chain | undefined; pollingInterval?: number | undefined; retryCount?: number | undefined; timeout?: number | undefined; }' is not assignable to type '{ chain?: Chain | undefined; pollingInterval?: number | undefined; retryCount?: number | undefined; timeout?: number | undefined; }'.
-      Types of property 'chain' are incompatible.
-        Type 'chain | undefined' is not assignable to type 'Chain | undefined'.
-          Type 'chain' is not assignable to type 'Chain | undefined'.
-            Type 'import("/home/runner/work/hub-perf-test/hub-perf-test/node_modules/@story-protocol/core-sdk/node_modules/viem/_types/types/chain").Chain | undefined' is not assignable to type 'import("/home/runner/work/hub-perf-test/hub-perf-test/node_modules/viem/_types/types/chain").Chain | undefined'.
-              Type 'Chain' is not assignable to type 'Chain | undefined'.
-                Type 'import("/home/runner/work/hub-perf-test/hub-perf-test/node_modules/@story-protocol/core-sdk/node_modules/viem/_types/types/chain").Chain' is not assignable to type 'import("/home/runner/work/hub-perf-test/hub-perf-test/node_modules/viem/_types/types/chain").Chain'.
-                  Property 'network' is missing in type 'Chain' but required in type 'ChainConstants'.
-                    Type 'chain' is not assignable to type 'Chain'.
-                      Type 'Chain | undefined' is not assignable to type 'Chain'.
-                        Type 'undefined' is not assignable to type 'Chain'.
-                          Type 'undefined' is not assignable to type 'ChainConstants'.
-                            Type 'chain' is not assignable to type 'ChainConstants'.
-                              Type 'Chain | undefined' is not assignable to type 'ChainConstants'.
-                                Type 'undefined' is not assignable to type 'ChainConstants'.
-sdk_load_test/load_create_ip_with_existing_collection.ts(43,9): error TS2322: Type 'PrivateKeyAccount' is not assignable to type '`0x${string}` | Account | undefined'.
-  Type 'PrivateKeyAccount' is not assignable to type '{ address: `0x${string}`; nonceManager?: NonceManager | undefined; sign?: ((parameters: { hash: `0x${string}`; }) => Promise<`0x${string}`>) | undefined; experimental_signAuthorization?: ((parameters: Authorization) => Promise<...>) | undefined; ... 17 more ...; isDeployed?: undefined; }'.
-    Types of property 'signTransaction' are incompatible.
-      Type '<TTransactionSerializable extends TransactionSerializable>(transaction: TTransactionSerializable, args?: { serializer?: SerializeTransactionFn<TTransactionSerializable> | undefined; } | undefined) => Promise<...>' is not assignable to type '<serializer extends SerializeTransactionFn<TransactionSerializable> = SerializeTransactionFn<TransactionSerializable>, transaction extends Parameters<serializer>[0] = Parameters<...>[0]>(transaction: transaction, options?: { ...; } | undefined) => Promise<...>'.
-        Types of parameters 'transaction' and 'transaction' are incompatible.
-          Type 'transaction' is not assignable to type 'TransactionSerializable'.
-            Type 'Parameters<serializer>[0]' is not assignable to type 'TransactionSerializable'.
-              Type 'OneOf<TransactionSerializable>' is not assignable to type 'TransactionSerializable'.
-                Type '{ type?: "eip2930" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type 'TransactionSerializable'.
-                  Type '{ type?: "eip2930" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type 'TransactionSerializableEIP1559<bigint, number>'.
-                    Type '{ type?: "eip2930" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type 'Partial<FeeValuesEIP1559<bigint>>'.
-                      Types of property 'gasPrice' are incompatible.
-                        Type 'bigint | undefined' is not assignable to type 'undefined'.
-                          Type 'bigint' is not assignable to type 'undefined'.
-                            Type 'Parameters<serializer>[0]' is not assignable to type 'TransactionSerializableGeneric<bigint, number>'.
-                              Type 'OneOf<TransactionSerializable>' is not assignable to type 'TransactionSerializableGeneric<bigint, number>'.
-                                Type '{ type?: "legacy" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type 'TransactionSerializableGeneric<bigint, number>'.
-                                  Type '{ type?: "legacy" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                    Types of property 'type' are incompatible.
-                                      Type 'string | undefined' is not assignable to type 'string'.
-                                        Type 'undefined' is not assignable to type 'string'.
-                                          Type 'Parameters<serializer>[0]' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                            Type 'OneOf<TransactionSerializable>' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                              Type '{ type?: "legacy" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                Types of property 'type' are incompatible.
-                                                  Type 'string | undefined' is not assignable to type 'string'.
-                                                    Type 'undefined' is not assignable to type 'string'.
-                                                      Type 'transaction' is not assignable to type 'TransactionSerializableGeneric<bigint, number>'.
-                                                        Type 'Parameters<serializer>[0]' is not assignable to type 'TransactionSerializableGeneric<bigint, number>'.
-                                                          Type 'OneOf<TransactionSerializable>' is not assignable to type 'TransactionSerializableGeneric<bigint, number>'.
-                                                            Type '{ type?: "legacy" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type 'TransactionSerializableGeneric<bigint, number>'.
-                                                              Type '{ type?: "legacy" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                                Types of property 'type' are incompatible.
-                                                                  Type 'string | undefined' is not assignable to type 'string'.
-                                                                    Type 'undefined' is not assignable to type 'string'.
-                                                                      Type 'Parameters<serializer>[0]' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                                        Type 'OneOf<TransactionSerializable>' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                                          Type '{ type?: "legacy" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                                            Types of property 'type' are incompatible.
-                                                                              Type 'string | undefined' is not assignable to type 'string'.
-                                                                                Type 'undefined' is not assignable to type 'string'.
-                                                                                  Type 'transaction' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                                                    Type 'Parameters<serializer>[0]' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                                                      Type 'OneOf<TransactionSerializable>' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                                                        Type '{ type?: "legacy" | undefined; data?: `0x${string}` | undefined; gas?: bigint | undefined; nonce?: number | undefined; to?: `0x${string}` | null | undefined; value?: bigint | undefined; r?: `0x${string}` | undefined; ... 13 more ...; authorizationList?: undefined; }' is not assignable to type '{ accessList?: AccessList | undefined; chainId?: number | undefined; gasPrice?: bigint | undefined; maxFeePerGas?: bigint | undefined; maxPriorityFeePerGas?: bigint | undefined; type: string; }'.
-                                                                                          Types of property 'type' are incompatible.
-                                                                                            Type 'string | undefined' is not assignable to type 'string'.
-                                                                                              Type 'undefined' is not assignable to type 'string'.
-sdk_load_test/load_create_ip_with_existing_collection.ts(44,9): error TS2322: Type 'HttpTransport' is not assignable to type 'Transport'.
-  Types of parameters '__0' and '__0' are incompatible.
-    Type '{ chain?: chain | undefined; pollingInterval?: number | undefined; retryCount?: number | undefined; timeout?: number | undefined; }' is not assignable to type '{ chain?: Chain | undefined; pollingInterval?: number | undefined; retryCount?: number | undefined; timeout?: number | undefined; }'.
-      Types of property 'chain' are incompatible.
-        Type 'chain | undefined' is not assignable to type 'Chain | undefined'.
-          Type 'chain' is not assignable to type 'Chain | undefined'.
-            Type 'import("/home/runner/work/hub-perf-test/hub-perf-test/node_modules/@story-protocol/core-sdk/node_modules/viem/_types/types/chain").Chain | undefined' is not assignable to type 'import("/home/runner/work/hub-perf-test/hub-perf-test/node_modules/viem/_types/types/chain").Chain | undefined'.
-              Type 'Chain' is not assignable to type 'Chain | undefined'.
-                Type 'import("/home/runner/work/hub-perf-test/hub-perf-test/node_modules/@story-protocol/core-sdk/node_modules/viem/_types/types/chain").Chain' is not assignable to type 'import("/home/runner/work/hub-perf-test/hub-perf-test/node_modules/viem/_types/types/chain").Chain'.
-                  Property 'network' is missing in type 'Chain' but required in type 'ChainConstants'.
-                    Type 'chain' is not assignable to type 'Chain'.
-                      Type 'Chain | undefined' is not assignable to type 'Chain'.
-                        Type 'undefined' is not assignable to type 'Chain'.
-                          Type 'undefined' is not assignable to type 'ChainConstants'.
-                            Type 'chain' is not assignable to type 'ChainConstants'.
-                              Type 'Chain | undefined' is not assignable to type 'ChainConstants'.
-                                Type 'undefined' is not assignable to type 'ChainConstants'.
+sdk_load_test/transfer.ts(1,24): error TS2307: Cannot find module 'ethers' or its corresponding type declarations.
 
-    at createTSError (/home/runner/.npm/_npx/1bf7c3c15bf47d04/node_modules/ts-node/src/index.ts:859:12)
-    at reportTSError (/home/runner/.npm/_npx/1bf7c3c15bf47d04/node_modules/ts-node/src/index.ts:863:19)
-    at getOutput (/home/runner/.npm/_npx/1bf7c3c15bf47d04/node_modules/ts-node/src/index.ts:1077:36)
-    at Object.compile (/home/runner/.npm/_npx/1bf7c3c15bf47d04/node_modules/ts-node/src/index.ts:1433:41)
-    at Module.m._compile (/home/runner/.npm/_npx/1bf7c3c15bf47d04/node_modules/ts-node/src/index.ts:1617:30)
+    at createTSError (/home/runner/work/hub-perf-test/hub-perf-test/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/home/runner/work/hub-perf-test/hub-perf-test/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/home/runner/work/hub-perf-test/hub-perf-test/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/home/runner/work/hub-perf-test/hub-perf-test/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/home/runner/work/hub-perf-test/hub-perf-test/node_modules/ts-node/src/index.ts:1617:30)
     at Module._extensions..js (node:internal/modules/cjs/loader:1426:10)
-    at Object.require.extensions.<computed> [as .ts] (/home/runner/.npm/_npx/1bf7c3c15bf47d04/node_modules/ts-node/src/index.ts:1621:12)
+    at Object.require.extensions.<computed> [as .ts] (/home/runner/work/hub-perf-test/hub-perf-test/node_modules/ts-node/src/index.ts:1621:12)
     at Module.load (node:internal/modules/cjs/loader:1205:32)
     at Function.Module._load (node:internal/modules/cjs/loader:1021:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:142:12) {
-  diagnosticCodes: [ 2307, 2307, 2322, 2322, 2322, 2322 ]
+    at Module.require (node:internal/modules/cjs/loader:1230:19) {
+  diagnosticCodes: [ 2307 ]
 }
