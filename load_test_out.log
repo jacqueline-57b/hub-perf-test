@@ -1,18 +1,71 @@
-/home/runner/work/hub-perf-test/hub-perf-test/node_modules/ts-node/src/index.ts:859
-    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
-           ^
-TSError: ⨯ Unable to compile TypeScript:
-sdk_load_test/transfer.ts(1,24): error TS2307: Cannot find module 'ethers' or its corresponding type declarations.
-
-    at createTSError (/home/runner/work/hub-perf-test/hub-perf-test/node_modules/ts-node/src/index.ts:859:12)
-    at reportTSError (/home/runner/work/hub-perf-test/hub-perf-test/node_modules/ts-node/src/index.ts:863:19)
-    at getOutput (/home/runner/work/hub-perf-test/hub-perf-test/node_modules/ts-node/src/index.ts:1077:36)
-    at Object.compile (/home/runner/work/hub-perf-test/hub-perf-test/node_modules/ts-node/src/index.ts:1433:41)
-    at Module.m._compile (/home/runner/work/hub-perf-test/hub-perf-test/node_modules/ts-node/src/index.ts:1617:30)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1426:10)
-    at Object.require.extensions.<computed> [as .ts] (/home/runner/work/hub-perf-test/hub-perf-test/node_modules/ts-node/src/index.ts:1621:12)
-    at Module.load (node:internal/modules/cjs/loader:1205:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:1021:12)
-    at Module.require (node:internal/modules/cjs/loader:1230:19) {
-  diagnosticCodes: [ 2307 ]
+Copied the first 2 addresses and private keys to ./sdk_load_test/wallets_privateKey_test.json
+Wallets loaded: 0x9b323b4d62e567e972488babf4f509a49733f19616b25459bf4290f242c84fa8,0x8073d5e6ffd6c21e649c9163d49e9cde41ae5999955bc6041a5b75976e5346d4
+NFT Collection address: 0x80115F4E47063B18d755102cD8acD554b3f2b4AC
+NFT Collection address: 0x978b5fb76cb1deF22C91D64ee330104fE276ed6B
+Key-Value Data: {
+  '0x9b323b4d62e567e972488babf4f509a49733f19616b25459bf4290f242c84fa8': '0x80115F4E47063B18d755102cD8acD554b3f2b4AC',
+  '0x8073d5e6ffd6c21e649c9163d49e9cde41ae5999955bc6041a5b75976e5346d4': '0x978b5fb76cb1deF22C91D64ee330104fE276ed6B'
 }
+Execution 1:
+Wallets loaded: 0x9b323b4d62e567e972488babf4f509a49733f19616b25459bf4290f242c84fa8,0x8073d5e6ffd6c21e649c9163d49e9cde41ae5999955bc6041a5b75976e5346d4
+NFT Collection address: 0x80115F4E47063B18d755102cD8acD554b3f2b4AC
+NFT Collection address: 0x978b5fb76cb1deF22C91D64ee330104fE276ed6B
+mintAndRegisterIpAssetWithPilTerms, txHash: 0x91f61f4760037205c2ccd6f4f2d6923949d0d86e881903eacf4a816a3caa14e7, ipId: 0xD5cB5360728994Dcd09B73aebf6cE20Ef199763a, tokenId: 1, licenseTermsId: 1
+Request for privateKey 0x9b323b4d62e567e972488babf4f509a49733f19616b25459bf4290f242c84fa8 took 8665 ms
+mintAndRegisterIpAssetWithPilTerms, txHash: 0x378bb0e86dc210fbc46196b7017f8744000fdaa86214ca71ba1afebde9ba64f3, ipId: 0x31C197c13Cd470aeC87657243740929737103C7b, tokenId: 1, licenseTermsId: 1
+Request for privateKey 0x8073d5e6ffd6c21e649c9163d49e9cde41ae5999955bc6041a5b75976e5346d4 took 9022 ms
+All promises have resolved
+Number of requests taking longer than 6 seconds: 2
+Percentage of requests taking longer than 6 seconds: 100.00%
+Result of promise 1: {
+  result: {
+    txHash: '0x91f61f4760037205c2ccd6f4f2d6923949d0d86e881903eacf4a816a3caa14e7',
+    ipId: '0xD5cB5360728994Dcd09B73aebf6cE20Ef199763a',
+    tokenId: 1n,
+    licenseTermsId: 1n
+  },
+  duration: 8665
+}
+Result of promise 2: {
+  result: {
+    txHash: '0x378bb0e86dc210fbc46196b7017f8744000fdaa86214ca71ba1afebde9ba64f3',
+    ipId: '0x31C197c13Cd470aeC87657243740929737103C7b',
+    tokenId: 1n,
+    licenseTermsId: 1n
+  },
+  duration: 9022
+}
+Execution 2:
+Wallets loaded: 0x9b323b4d62e567e972488babf4f509a49733f19616b25459bf4290f242c84fa8,0x8073d5e6ffd6c21e649c9163d49e9cde41ae5999955bc6041a5b75976e5346d4
+NFT Collection address: 0x80115F4E47063B18d755102cD8acD554b3f2b4AC
+NFT Collection address: 0x978b5fb76cb1deF22C91D64ee330104fE276ed6B
+mintAndRegisterIpAssetWithPilTerms, txHash: 0x88fc0afe7fded989c1749373014b129ca8dc56b9c4c848a3149b6822c6330919, ipId: 0x7877c16D3c1bF84d018d2e2ED2025b3F5D0A23c3, tokenId: 2, licenseTermsId: 1
+Request for privateKey 0x8073d5e6ffd6c21e649c9163d49e9cde41ae5999955bc6041a5b75976e5346d4 took 4671 ms
+mintAndRegisterIpAssetWithPilTerms, txHash: 0x251672c148956f56fce9866e36c54f9274dfc6008e8ccbc01c0ae7ea65699497, ipId: 0xAFc8AA037977DC05B5d4F30aBe2910dE33462511, tokenId: 2, licenseTermsId: 1
+Request for privateKey 0x9b323b4d62e567e972488babf4f509a49733f19616b25459bf4290f242c84fa8 took 8600 ms
+All promises have resolved
+Number of requests taking longer than 6 seconds: 1
+Percentage of requests taking longer than 6 seconds: 50.00%
+Result of promise 1: {
+  result: {
+    txHash: '0x251672c148956f56fce9866e36c54f9274dfc6008e8ccbc01c0ae7ea65699497',
+    ipId: '0xAFc8AA037977DC05B5d4F30aBe2910dE33462511',
+    tokenId: 2n,
+    licenseTermsId: 1n
+  },
+  duration: 8600
+}
+Result of promise 2: {
+  result: {
+    txHash: '0x88fc0afe7fded989c1749373014b129ca8dc56b9c4c848a3149b6822c6330919',
+    ipId: '0x7877c16D3c1bF84d018d2e2ED2025b3F5D0A23c3',
+    tokenId: 2n,
+    licenseTermsId: 1n
+  },
+  duration: 4671
+}
+Total Requests: 4
+Total Duration: 26542 ms
+Average Duration: 6635.50 ms
+Count of durations > 8000 ms: 2
+Count of durations <= 8000 ms: 2
